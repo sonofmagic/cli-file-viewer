@@ -6,12 +6,12 @@
     "declaration": true,
     "declarationDir": "types",
     "allowSyntheticDefaultImports": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
   "exclude": ["dist", "node_modules", "test/types"],
-  "include": ["src/**/*", "types/**/*", "test/**/*"]
+  "include": ["src/**/*", "types/**/*"]
 }

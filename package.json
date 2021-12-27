@@ -9,7 +9,9 @@
     "build": "rollup -c",
     "build:tsc": "tsc --build tsconfig.json",
     "test": "jest",
-    "init:rename": "node scripts/init/rename.js"
+    "init:rename": "node scripts/init/rename.js",
+    "dev": "node bin/cfv.js test/fixtures",
+    "dev2": "node bin/cfv.js"
   },
   "bin": {
     "cfv": "bin/cfv.js",
@@ -20,7 +22,8 @@
     "url": "git+https://github.com/sonofmagic/cli-file-viewer.git"
   },
   "files": [
-    "dist"
+    "dist",
+    "bin"
   ],
   "publishConfig": {
     "access": "public",

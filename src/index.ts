@@ -8,7 +8,9 @@ const rl = readline.createInterface({
   output: process.stdout
 })
 const cwd = process.cwd()
-const targetPath = cwd
+
+const targetDirs = process.argv.slice(2)
+const targetPath = targetDirs[0] || cwd
 const targetStat = fs.statSync(targetPath)
 
 export interface IFileEntity {

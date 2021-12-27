@@ -8,10 +8,11 @@ const config = {
   output: [
     {
       file: pkg.main,
-      format: 'cjs'
+      format: 'cjs',
+      sourcemap: true
       // exports: 'auto'
     },
-    { format: 'esm', file: pkg.module }
+    { format: 'esm', file: pkg.module, sourcemap: true }
   ],
 
   plugins: [
