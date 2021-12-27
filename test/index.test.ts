@@ -1,12 +1,8 @@
-import { foo, wait } from '../src'
-
+import { execa } from 'execa'
+import path from 'path'
+const bin = path.resolve(__dirname, '../bin/cfv.js')
 describe('[Default]', () => {
-  test('foo should be bar', () => {
-    expect(foo).toBe('bar')
-  })
-
-  test('wait 100ms', async () => {
-    const flag = await wait(100)
-    expect(flag).toBe(true)
+  test('with no path param', () => {
+    execa(bin)
   })
 })
