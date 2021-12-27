@@ -1,6 +1,6 @@
 {
   "name": "cli-file-viewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cli-file-viewer",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -29,7 +29,14 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "page",
+    "pagation",
+    "preview",
+    "readline",
+    "command-line"
+  ],
   "author": "SonOfMagic <qq1324318532@gmail.com>",
   "license": "MIT",
   "bugs": {
