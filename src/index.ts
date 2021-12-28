@@ -17,7 +17,7 @@ export interface IFileEntity {
   absolutePath: string
 }
 
-export function preview(targetPath: string) {
+export function preview (targetPath: string) {
   const targetStat = fs.statSync(targetPath)
 
   if (targetStat.isDirectory()) {
@@ -37,7 +37,7 @@ export function preview(targetPath: string) {
 
     let idx = 0
     const total = filenameList.length
-    function showPhoto({ filename, absolutePath }: IFileEntity, idx: number) {
+    function showPhoto ({ filename, absolutePath }: IFileEntity, idx: number) {
       const photo = fs.readFileSync(absolutePath, {
         encoding: 'utf-8'
       })

@@ -2,6 +2,8 @@ import typescript from '@rollup/plugin-typescript'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import pkg from './package.json'
+const isDev = process.env.NODE_ENV === 'development'
+
 /** @type {import('rollup').RollupOptions} */
 const config = {
   input: 'src/index.ts',
@@ -9,10 +11,10 @@ const config = {
     {
       file: pkg.main,
       format: 'cjs',
-      sourcemap: true
+      sourcemap: isDev
       // exports: 'auto'
     },
-    { format: 'esm', file: pkg.module, sourcemap: true }
+    { format: 'esm', file: pkg.module, sourcemap: isDev }
   ],
 
   plugins: [
